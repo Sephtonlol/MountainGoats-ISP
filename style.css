@@ -1,0 +1,462 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden; /* Hide scrollbars */
+}
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+    border-radius: 20px;
+}
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 20px;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+    border-radius: 20px;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+}
+/* vanaf hier is ISP */
+.search-container {
+    width: 40%; 
+    height: 615px; 
+    position: absolute;
+    left: 58%;
+    border-radius: 25px; 
+    margin-top: 0px;
+    /*
+    clip:rect(158px,1000px,1000px,-100px);
+    top:-100px;
+    */
+    border-color: var(--tertiary-color);
+    border-width: 5px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 9px 10px rgba(67, 67, 67, 0.15);
+    overflow-x: hidden;
+}
+.search-container:hover{
+    box-shadow: 0 0 9px 10px rgba(67, 67, 67, 0.27);
+}
+body {
+    user-select: none;
+    margin: 0;
+    overflow: hidden;  
+    /* Hide scrollbars  */
+    padding: 0;
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color); 
+    padding: 10px 0; 
+}
+.nottopbar {
+    display: flex;
+    align-items: top;
+    background: var(--secundary-color);
+    padding: 10px 0; 
+    height: 1000px;
+    padding-top: 0px 0px; 
+    background: rgb(34,34,34);
+    background: linear-gradient(160deg, var(--secundary-color) 20%, rgba(148,187,233,1) 200%);
+}
+.button1 {
+    user-select: none;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #5f6368; 
+    background-color: var(--secundary-color); 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    margin: 0 4px; 
+}
+.button1:hover {
+transform: scale(.95); 
+box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+}
+.button1:active {
+transform: scale(.9);
+box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.01);
+}
+.searchBox{
+transition: all 0.5s ease;
+position: fixed;
+right:0;
+margin-right: 3%;
+margin-top: -2px;
+width: 350px;
+border: 3px solid var(--quinary-color);;
+background: transparent;
+padding: 5px 10px;
+border-radius: 50px;
+outline: none;
+font-size: 18px;
+color: #757575;
+font-weight: bold;
+box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.025);
+transition: all 0.5s ease;
+background: var(--tertiary-color);
+background: linear-gradient(160deg, var(--secundary-color) 19%, var(--primary-color) 100%);
+}
+.searchBox:hover{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
+}
+.button2{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    transition: all 0.25s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 150px;
+    width: 150px;
+    user-select: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    color: #5f6368; 
+    border-width: 4px;
+    border: none;
+    background-color: var(--quaternary-color);
+    cursor: pointer;
+}
+.button2:hover {
+background-color: rgba #f2f3f5; 
+transform: scale(.98); 
+box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.03);
+}
+.button2:active {
+transform: scale(.86);
+box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
+}
+.button2-1{
+    margin-left: 70px; 
+    margin-top: 40px;
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    transition: all 0.25s ease;
+    height: 150px;
+    width: 150px;
+    user-select: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    color: #5f6368; 
+    border-width: 4px;
+    border: none;
+    background-color: var(--quaternary-color);
+    cursor: pointer;
+}
+.button2-1:hover {
+    background-color: rgba #f2f3f5; 
+    transform: scale(.98); 
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.03);
+    }
+    .button2-1:active {
+    transform: scale(.86);
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
+    }
+.button2-2{
+    margin-left: 70px; 
+    margin-top: 20px;
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    transition: all 0.25s ease;
+    height: 150px;
+    width: 150px;
+    user-select: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    color: #5f6368; 
+    border-width: 4px;
+    border: none;
+    background-color: var(--quaternary-color);
+    cursor: pointer;
+}
+.button2-2:hover {
+    background-color: rgba #f2f3f5; 
+    transform: scale(.98); 
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.03);
+    }
+    .button2-2:active {
+    transform: scale(.86);
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
+    }
+#icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 97.5%;
+    position: fixed;
+}
+:root{    
+    --primary-color: #1c1c1c ;
+    --secundary-color: #222222;
+    --tertiary-color: #222222;
+    --quaternary-color: #333333;
+    --quinary-color: #35373c;
+}
+.dark-theme{
+    --primary-color: #e4e4e4 ;
+    --secundary-color: #d3d3d3;
+    --tertiary-color: (185, 191, 203, 0);
+    --quaternary-color: #b2b4b8;
+    --quinary-color: #b4baca;
+}
+
+@media screen and (min-width:851px) and (max-width: 985px){
+    .button2{
+        margin-top: 10px;
+        margin-left: 15px;
+        height: 130px;
+        width: 130px;
+        font-size: 19px;
+    }
+    .button2-1{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 130px;
+        width: 130px;
+        font-size: 19px;
+    }
+    .button2-2{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 130px;
+        width: 130px;
+        font-size: 19px;
+    }
+    .search-container {
+        margin-top: 10px;
+        width: 45%; 
+        height: 415px; 
+        left: 52%;
+    }
+    .searchBox{
+        right: 19px;
+        margin-right: 3%;
+        width: 180px;
+    }
+    #icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 95.5%;
+        position: fixed;
+    }
+}
+@media screen and (min-width:701px) and (max-width: 850px){
+    .button2{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 110px;
+        width: 110px;
+        font-size: 19px;
+    }
+    .button2-1{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 110px;
+        width: 110px;
+        font-size: 19px;
+    }
+    .button2-2{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 110px;
+        width: 110px;
+        font-size: 19px;
+    }
+    .search-container {
+        margin-top: 10px;
+        width: 45%; 
+        height: 415px; 
+        left: 52%;
+    }
+    .searchBox{
+        right: 19px;
+        margin-right: 3%;
+        width: 180px;
+    }
+    #icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 94.5%;
+        position: fixed;
+    }
+}
+@media screen and (min-width:601px) and (max-width: 850px){
+    .button2{
+        margin-top: 10px;
+        margin-left: 6px;
+        height: 105px;
+        width: 105px;
+        font-size: 19px;
+    }
+    .button2-1{
+        margin-top: 10px;
+        margin-left: 6px;
+        height: 105px;
+        width: 105px;
+        font-size: 19px;
+    }
+    .button2-2{
+        margin-top: 10px;
+        margin-left: 6px;
+        height: 105px;
+        width: 105px;
+        font-size: 19px;
+    }
+    .search-container {
+        margin-top: 10px;
+        width: 40%; 
+        height: 415px; 
+        left: 57%;
+    }
+    .searchBox{
+        right: 19px;
+        margin-right: 3%;
+        width: 180px;
+    }
+    #icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 94.5%;
+        position: fixed;
+    }
+}
+@media screen and (min-width:550px) and (max-width: 600px){
+    .button2{
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .button2-1{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .button2-2{
+        margin-top: 10px;
+        margin-left: 7px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .search-container {
+        margin-top: 40px;
+        width: 40%; 
+        height: 315px; 
+    }
+    .searchBox{
+        right:-5px;
+        margin-right: 3%;
+        margin-top: 110px;
+        width: 200px;
+    }
+    #icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 93.5%;
+        position: fixed;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width: 549px){
+    .button2{
+        margin-top: 290px;
+        margin-left: 5px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .button2-1{
+        margin-top: 10px;
+        margin-left: 40px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .button2-2{
+        margin-top: 10px;
+        margin-left: 40px;
+        height: 100px;
+        width: 100px;
+        font-size: 19px;
+    }
+    .search-container {
+        width: 88%; 
+        height: 225px; 
+        left: 5%;
+        margin-top: 40px;
+    }
+    .searchBox{
+        right: 10px;
+        margin-top: 110px;
+        width: 330px;
+    }
+    #icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 90%;
+        position: fixed;
+    }
+}
