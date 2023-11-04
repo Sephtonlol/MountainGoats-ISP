@@ -36,12 +36,6 @@ searchFrame.removeAttribute("scrolling");
 searchFrame.setAttribute("scrolling", "no");
 });
 
-var icon = document.getElementById("icon");
-
-icon.onclick= function(){
-    document.body.classList.toggle("dark-theme");
-};
-
 const button = document.getElementById('mountainGoats');
 const mountainGoatsByClass = document.getElementsByClassName("play");
 const audio = new Audio("./Assets/goatScream.mp3");
