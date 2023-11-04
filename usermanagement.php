@@ -83,7 +83,9 @@ $result = $conn->query($sql);
 <body>
 <div class="topbar">    
     <div>
-        <button onclick="window.location.href='home.php'" class="button1">Mountain Goats</button>
+        <button onclick="window.location.href='home.php'" class="button1" id="mountainGoats">Mountain Goats</button>
+        <button onclick="window.location.href='usermanagement.php'" class="button1">Admin</button>
+        <button onclick="window.location.href='logout.php'" id="logout" class="button1">Logout</button>
         <button onclick="window.location.href='createacc.php'" class="button1">Maak account</button>
     </div>
 </div>

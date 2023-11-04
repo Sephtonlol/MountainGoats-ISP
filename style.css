@@ -12,6 +12,7 @@ body {
 }
 .login {
     width: 400px;
+    height: 320px;
     background-color: #ffffff;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
     margin: 100px auto;
@@ -239,10 +240,17 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     }
 #icon{
+    transition: all 0.25s ease;
     width: 30px;
     cursor: pointer;
     margin-left: 97.5%;
     position: fixed;
+}
+#icon:hover{
+    transform: scale(.95);
+}
+#icon:active{
+    transform: scale(.9);
 }
 :root{    
     --primary-color: #1c1c1c ;
@@ -257,6 +265,55 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     --tertiary-color: (185, 191, 203, 0);
     --quaternary-color: #b2b4b8;
     --quinary-color: #b4baca;
+}
+.profileBox{
+    transition: all 0,25 ease;
+    position: absolute;
+    top: 23%;
+    left: 38.65%;
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    transition: all 0.25s ease;
+    justify-content: center;
+    height: 350px;
+    width: 250px;
+    user-select: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    color: #5f6368; 
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--primary-color); 
+    background-color: var(--secundary-color);
+}
+.profilesubmit{
+    position: absolute;
+    top: 76%;
+    left: 41.8%;
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    user-select: none;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #5f6368; 
+    background-color: var(--secundary-color); 
+    padding: 10px 20px; 
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--primary-color); 
+    cursor: pointer; 
+    margin: 0 4px; 
+}
+.profilesubmit:hover{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.02);
+    transform: scale(.98);
+}
+.profilesubmit:active{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.03);
+    transform: scale(.90);
 }
 
 @media screen and (min-width:851px) and (max-width: 985px){

@@ -1,64 +1,89 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
+
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'phlogin';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+
+$conn = new mysqli($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-// We don't have the password or email info stored in sessions, so instead, we can get the results from the database.
-$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
-// In this case we can use the account ID to get the account info.
+
+$stmt = $conn->prepare('SELECT password, email, darkmode FROM accounts WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email);
+$stmt->bind_result($password, $email, $darkmode);
 $stmt->fetch();
 $stmt->close();
+$conn->close();
+?>
+
+<?php
+if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
+
+    echo('<script>
+    function toggleDarkTheme() {
+        document.body.classList.toggle("dark-theme");
+    }
+
+    window.onload = function() {
+        toggleDarkTheme();
+    };
+    </script>');
+}
 ?>
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Profile Page</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	</head>
-	<body class="loggedin">
-		<nav class="navtop">
-			<div>
-				<h1>Website Title</h1>
-				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-			</div>
-		</nav>
-		<div class="content2">
-			<h2>Profile Page</h2>
-			<div>
-				<p>Your account details are below:</p>
-				<table>
+<head>
+    <meta charset="utf-8">
+    <title>Profile Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loggedin">
+    <nav class="navtop">
+        <div class="topbar">
+            <button onclick="window.location.href='home.php'" class="button1" id="mountainGoats">Mountain Goats</button>
+            <button onclick="window.location.href='usermanagement.php'" class="button1">Admin</button>
+            <button onclick="window.location.href='logout.php'" id="logout" class="button1">uitloggen</button>
+			<img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
+        </div>
+    </nav>
+    <div class="content2">
+        <div class="nottopbar">
+            <form action="update_profile.php" method="POST">
+				<div>
+                <table class="profileBox">
+                    <tr> 
+                        <td>Naam</td>
+                        <td><?=$_SESSION['name']?></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" value="<?=$email?>"></td>
+                    </tr>
 					<tr>
-						<td>Username:</td>
-						<td><?=$_SESSION['name']?></td>
-					</tr>
-					<tr>
-						<td>Password:</td>
-						<td><?=$password?></td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td><?=$email?></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</body>
+                        <td>Wachtwoord</td>
+                        <td><input type="password" name="password" placeholder="<?=$password?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Darkmode</td>
+                        <td><input type="checkbox" name="darkmode" <?=$darkmode == 1 ? 'checked' : ''?>></td>
+                    </tr>
+                </table >
+                <input type="submit" value="wijzigingen opslaan" class="profilesubmit">
+</div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

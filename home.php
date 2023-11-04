@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 $conn = new mysqli("localhost", "root", "", "phlogin");
 
-if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 1) {
+if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 
     echo('<script>
     function toggleDarkTheme() {
@@ -42,9 +42,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 1) {
 
         </div>
         <input type="text" class="searchBox" id="searchBox" placeholder="zoeken..." onkeydown="search(event)">
-        <img src="./Assets/moon.png" id="icon">
-        <button onclick="window.location.href='logout.php'" class="button1">Uitloggen</button>
-        <button onclick="window.location.href='profile.php'" class="button1">Profiel</button>
+        <img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
     </div>
     <div class="nottopbar">
         <div>

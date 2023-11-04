@@ -38,6 +38,7 @@ if ($stmt = $con->prepare('SELECT id, password, admin, darkmode FROM accounts WH
             $_SESSION['id'] = $id;
             $_SESSION['admin'] = $admin; // Store the admin value in the session
             $_SESSION['darkmode'] = $darkmode;
+            $_SESSION['username'] = $username;
             header('Location: home.php');
         } else {
             // Incorrect password
