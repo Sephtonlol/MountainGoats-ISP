@@ -110,8 +110,8 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 </div>
 
 <div class="nottopbar2" style="overflow: visible; display: flex; justify-content: center;">
-    <div style="font-size: 20px; align-items: top; margin-top: 0%; overflow: visible;">
-<h1>Gebruikers beheer</h1>
+    <div style="font-size: 20px; align-items: top; margin-top: 0%; overflow: visible; font-weight: bold;">
+    <h1 class="headerUM" >Gebruikers beheer</h1>
 <div>
 <!-- User List -->
 <table>

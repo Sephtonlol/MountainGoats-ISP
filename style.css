@@ -268,6 +268,7 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     --tertiary-color: #222222;
     --quaternary-color: #333333;
     --quinary-color: #35373c;
+    --senary-color: #e8e8e8;
 }
 .dark-theme{
     --primary-color: #e4e4e4 ;
@@ -275,6 +276,10 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     --tertiary-color: (185, 191, 203, 0);
     --quaternary-color: #b2b4b8;
     --quinary-color: #b4baca;
+    --senary-color: #1c1c1c;
+}
+.headerUM{
+    color: var(--senary-color);
 }
 .profileBox{
     transition: all 0,25 ease;
