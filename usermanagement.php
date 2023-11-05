@@ -74,32 +74,56 @@ $sql = "SELECT username, email, admin, darkmode FROM accounts";
 $result = $conn->query($sql);
 ?>
 
+<?php
+if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
+
+    echo('<script>
+    function toggleDarkTheme() {
+        document.body.classList.toggle("dark-theme");
+    }
+
+    window.onload = function() {
+        toggleDarkTheme();
+    };
+    </script>');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Mountain Goats - Admin</title>
-    <link rel="stylesheet" type="text/css" href="styleadmin.css">
+    <link rel="stylesheet" type="text/css" defer href="styleadmin.css">
+    <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
 <div class="topbar">    
     <div>
         <button onclick="window.location.href='home.php'" class="button1" id="mountainGoats">Mountain Goats</button>
         <button onclick="window.location.href='usermanagement.php'" class="button1">Admin</button>
-        <button onclick="window.location.href='logout.php'" id="logout" class="button1">Logout</button>
+        <button onclick="window.location.href='logout.php'" id="logout" class="button1">Uitloggen</button>
         <button onclick="window.location.href='createacc.php'" class="button1">Maak account</button>
     </div>
+    <img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
 </div>
-<h1>Gebruikers beheer</h1>
 
+<div class="nottopbar2" style="overflow: visible; display: flex; justify-content: center;">
+    <div style="font-size: 20px; align-items: top; margin-top: 0%; overflow: visible;">
+<h1>Gebruikers beheer</h1>
+<div>
 <!-- User List -->
 <table>
     <tr>
-        <th>naam</th>
+        <th>Naam</th>
         <th>Email</th>
         <th>Admin</th>
         <th>Dark Mode</th>
         <th>Acties</th>
     </tr>
+
+    </div>
     <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -139,3 +163,8 @@ $result = $conn->query($sql);
 </table>
 </body>
 </html>
+<style>
+    body {
+    overflow: visible;
+}
+</style>

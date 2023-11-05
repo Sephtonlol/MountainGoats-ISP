@@ -108,10 +108,20 @@ body {
     align-items: top;
     background: var(--secundary-color);
     padding: 10px 0; 
-    height: 1000px;
+    height: 700px;      
     padding-top: 0px 0px; 
     background: rgb(34,34,34);
     background: linear-gradient(160deg, var(--secundary-color) 20%, rgba(148,187,233,1) 200%);
+}
+.nottopbar2 {
+    display: flex;
+    align-items: top;
+    background: var(--secundary-color);
+    padding: 10px 0; 
+    height: 10000px;
+    padding-top: 0px 0px; 
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, var(--secundary-color) 20%, rgba(148,187,233,1) 200%);
 }
 .button1 {
     user-select: none;
