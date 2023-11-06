@@ -57,3 +57,24 @@ button.addEventListener('click', () => {
   }
 });
 
+const specificImagePath = './Assets/helpHome.png';
+const popupOverlay = document.querySelector('.popup-overlay');
+const popupImage = document.getElementById('popupImage');
+
+// Event listener for the helpButton
+document.getElementById('helpButton').addEventListener('click', () => {
+  // Set the source and dimensions of the popup image
+  popupImage.src = specificImagePath;
+  popupImage.style.maxWidth = '90%';
+  popupImage.style.maxHeight = '90vh';
+
+  // Display the popup overlay
+  popupOverlay.style.display = 'flex'; // Use flex to center the content vertically and horizontally
+});
+
+// Close the popup overlay when the close button is clicked
+document.querySelector('.popup-imsgespan').addEventListener('click', () => {
+  // Hide the popup overlay
+  popupOverlay.style.display = 'none';
+});
+

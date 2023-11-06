@@ -32,14 +32,19 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 </head>
 
 <body>
-
+<div class="popup-overlay">
+  <div class="popup-image">
+    <img id="popupImage" src="" alt="Popup Image">
+    <span class="popup-imsgespan">Close</span>
+  </div>
+</div>
     <div class="topbar">
+        
         
         <div>
             <button class="button1" id="mountainGoats">Mountain Goats</button>
             <button onclick="window.location.href='usermanagement.php'" class="button1">Admin</button>
             <button id="helpButton" class="button1">Help</button>
-
         </div>
         <input type="text" class="searchBox" id="searchBox" placeholder="zoeken..." onkeydown="search(event)">
         <img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
@@ -55,7 +60,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
     <button style="margin-top: 20px;" class="button2-2" onclick="window.open('https://www.office.com', '_blank');" id="button5">office</button>
     <button style="margin-top: 20px;" class="button2" onclick="window.open('https://vistacollege-student.educus.nl/?2', '_blank');" id="button6">eduarte</button></a>
     <button style="margin-top: 20px;" class="button2" id="button7">bing AI</button>
-        </div>
+</div>
         <iframe src = "" class="search-container" id="searchFrame" frameborder="5"></iframe>
     </div>
 </body>
