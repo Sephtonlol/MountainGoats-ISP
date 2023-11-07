@@ -383,7 +383,7 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
 .inputChatBox{
     margin-left: 200px;
     position: absolute;
-    bottom: 0;
+    top: 665px;
     width: 60%;
 }
 .inputChatBox input{
@@ -392,6 +392,7 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    top: 600px;
 }
 .inputChatBox button{
     box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
@@ -402,6 +403,7 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     color: var(--senary-color);
     transition: all ;
     transition: all 0,25 ease;
+    top: 600px;
 }
 .inputChatBox button:active{
     transform: scale(.95);
@@ -465,11 +467,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     .inputChatBox{
         margin-left: 100px;
         position: absolute;
-        bottom: 120px;
+        top: 600px;
         width: 60%;
     }
     .inputChatBox input{
-        bottom: 120px;
+        top: 600px;
         background-color: var(--quinary-color);
         color: var(--senary-color);
         border: none;
@@ -548,11 +550,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     .inputChatBox{
         margin-left: 55px;
         position: absolute;
-        bottom: 170px;
+        top: 540px;
         width: 60%;
     }
     .inputChatBox input{
-        bottom: 170px;
+        top: 540px;
         background-color: var(--quinary-color);
         color: var(--senary-color);
         border: none;
@@ -631,11 +633,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     .inputChatBox{
         margin-left: 55px;
         position: absolute;
-        bottom: 170px;
+        top: 540px;
         width: 60%;
     }
     .inputChatBox input{
-        bottom: 170px;
+        top: 540px;
         background-color: var(--quinary-color);
         color: var(--senary-color);
         border: none;
@@ -714,11 +716,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     .inputChatBox{
         margin-left: 45px;
         position: absolute;
-        bottom: 180px;
+        top: 530px;
         width: 60%;
     }
     .inputChatBox input{
-        bottom: 180px;
+        top: 530px;
         background-color: var(--quinary-color);
         color: var(--senary-color);
         border: none;
@@ -798,11 +800,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     .inputChatBox{
         margin-left: 45px;
         position: absolute;
-        bottom: 10px;
+        top: 700px;
         width: 60%;
     }
     .inputChatBox input{
-        bottom: 180px;
+        top: 700px;
         background-color: var(--quinary-color);
         color: var(--senary-color);
         border: none;
