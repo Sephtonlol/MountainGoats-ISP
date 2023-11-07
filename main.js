@@ -57,7 +57,7 @@ button.addEventListener('click', () => {
   }
 });
 
-const specificImagePath = './Assets/helpHome.png';
+const specificImagePath = './Assets/helpsheet.png';
 const popupOverlay = document.querySelector('.popup-overlay');
 const popupImage = document.getElementById('popupImage');
 
