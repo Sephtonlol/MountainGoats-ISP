@@ -18,22 +18,22 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get other form data
+    // krijgt de data
     $email = $_POST['email'];
     $darkmode = isset($_POST['darkmode']) ? 1 : 0;
 
-    // Check if a new password is provided
+    // checked of een nieuw wachtwoord is ingediend
     if (!empty($_POST['password'])) {
-        // Get new password from the form
+        // checked the form als er een nieuw wachtwoord is
         $newPassword = $_POST['password'];
-        // Hash the new password
+        // incrypt het wachtwoord voor security
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        // Update the hashed password, email, and darkmode in the database
+        // update het wachtwoord in de database
         $stmt = $conn->prepare('UPDATE accounts SET password = ?, email = ?, darkmode = ? WHERE id = ?');
         $stmt->bind_param('ssii', $hashedPassword, $email, $darkmode, $_SESSION['id']);
     } else {
-        // Update email and darkmode only (without changing the password)
+        // Update de email en darkmode status
         $stmt = $conn->prepare('UPDATE accounts SET email = ?, darkmode = ? WHERE id = ?');
         $stmt->bind_param('sii', $email, $darkmode, $_SESSION['id']);
     }

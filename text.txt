@@ -1,1 +1,1 @@
-<strong style='color: rgb(33, 167,164)'>Alexander</strong>: Voorbeeldtekst<br>
+<strong style='color: rgb(74, 41,140)'>Alexander</strong>: Voorbeeldtekst<br>

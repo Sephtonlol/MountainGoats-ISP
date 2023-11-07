@@ -51,6 +51,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 </head>
 <body class="loggedin">
     <nav class="navtop">
+        <!-- topbar knoppen -->
         <div class="topbar">
             <button onclick="window.location.href='home.php'" class="button1" id="mountainGoats">Mountain Goats</button>
             <button onclick="window.location.href='usermanagement.php'" class="button1">Admin</button>
@@ -58,6 +59,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 			<img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
         </div>
     </nav>
+    <!-- edit profiel knoppen -->
     <div class="content2">
         <div class="nottopbar">
             <form action="update_profile.php" method="POST">
@@ -80,6 +82,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
                         <td><input type="checkbox" name="darkmode" <?=$darkmode == 1 ? 'checked' : ''?>></td>
                     </tr>
                 </table >
+                <!-- submit knop -->
                 <input type="submit" value="wijzigingen opslaan" class="profilesubmit">
 </div>
             </form>

@@ -26,13 +26,13 @@ AjaxPush.prototype =
 			},
 			complete: function(data)
 			{
-				// if a connection problem occurs, try to reconnect each 1 second
+				// als er problemen zijn met connectie connect opnieuw
 				if (!status)
 				{
 					console.info("The connection has been lost!, trying to reconnect ...");
 					setTimeout(function(){ that.connect(callback); }, 1000);
 				}
-				// send a new ajax request when this request is finished
+				// stuur ajax request naar server
 				else
 					that.connect(callback);
 

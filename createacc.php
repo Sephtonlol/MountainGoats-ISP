@@ -1,7 +1,6 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
+// niet ingeloged wordt geredirect naar de inlogpagina
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
@@ -25,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
 </div>
 <?php
-    // Check if the user is an admin (You should have a better way to authenticate admins).
+    // Check voor admin status
     if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Handle form submission
@@ -34,7 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
             $email = $_POST['email'];
             $admin = isset($_POST['admin']) ? 1 : 0; // Check if the admin checkbox is checked
             
-            // Perform database query to insert the user account
+            // databasequery uit het gebruikersaccount toevoegen
             $conn = new mysqli("localhost", "root", "", "phlogin");
 
             if ($conn->connect_error) {
@@ -59,6 +58,7 @@ if (!isset($_SESSION['loggedin'])) {
         echo '<script>window.location.href = "home.php";</script>';
     }
     ?>
+    <!-- zichtbare gebieden en invulstukken van informatie -->
     <div class="nottopbar">
     <div class="user-form-container" style="margin-bottom: 37.5%; justify-content: center; margin-left:42.5%;">
         <h1 id="header123" class="page-title">Maak account</h1>

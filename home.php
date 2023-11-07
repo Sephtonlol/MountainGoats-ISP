@@ -51,9 +51,11 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
         <input type="text" class="searchBox" id="searchBox" placeholder="zoeken..." onkeydown="search(event)">
         <img src="./Assets/profile.png" id="icon" onclick="window.location.href='profile.php'">
     </div>
+    <!-- de main -->
     <div class="nottopbar">
         <div>
             <div>
+                <!-- de knoppen -->
     <button class="button2-1" onclick="window.open('https://outlook.office.com/mail/?actSwt=true', '_blank');" id="button2">E-mail</button>
     <button class="button2" onclick="window.open('https://www.stichtingpraktijkleren.nl/inloggen/');" id="button3">SPL</button>
     <button class="button2" id="button4">Translate</button>
@@ -63,16 +65,15 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
     <button style="margin-top: 20px;" class="button2-2" onclick="window.open('https://www.office.com', '_blank');" id="button5">Office</button>
     <button style="margin-top: 20px;" class="button2" onclick="window.open('https://vistacollege-student.educus.nl/?2', '_blank');" id="button6">Eduarte</button></a>
     <button style="margin-top: 20px;" class="button2" id="button7">Bing AI</button>
+    <!-- de chatbox -->
 </div class="nottopbar">
 	<script type="text/javascript">
 		var comet = new AjaxPush('listener.php', 'sender.php');
 		var n = new Function("return (Math.random()*190).toFixed(0)");
 
-		// create anonymous users
+		// voor de kleur en gebruikers naam
 		var c = "rgb(" + n() + ", " + n() + "," + n() + ")";
 		var template = "<strong style='color: " + c + "'>" + <?php echo json_encode($_SESSION['name']); ?> + "</strong>: ";
-
-		// listener
 
 		// sender
 		var send = function() {
@@ -80,6 +81,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 				$("#message").val('').focus();
 			})
 		}
+        // bewaart het laatste bericht in een text document
         comet.connect(function(data) {
     $("#history").append(data.message + "<br>");
     // Automatisch naar beneden scrollen
@@ -88,6 +90,7 @@ if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 0) {
 
         
 	</script>
+    <!-- chatbox en knoppen -->
 	<div class="chatBox" id="history"></div>
     <div class="inputChatBox">
     <input type="text" autofocus id="message" placeholder="Jouw bericht">
