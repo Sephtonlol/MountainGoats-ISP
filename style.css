@@ -13,10 +13,13 @@ body {
 .login {
     width: 400px;
     height: 320px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
     margin: 100px auto;
     border-radius: 20px;
+}
+.login input{
+    background-color: #f1f1f1;
 }
 .login h1 {
     text-align: center;
