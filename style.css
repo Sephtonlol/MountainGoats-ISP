@@ -441,6 +441,49 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
         margin-left: 95.5%;
         position: fixed;
     }
+    .chatBox{
+        margin-left: 7px;
+        margin-top: 15px;
+        position: flex;
+        padding: 20px;
+        max-width: 430px;
+        max-height: 200px;
+        width: 430px;
+        height: 200px;
+        background-color: var(--quaternary-color);
+        overflow: auto;
+        border-radius: 8px;
+        color: var(--senary-color);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    }
+    .inputChatBox{
+        margin-left: 100px;
+        position: absolute;
+        bottom: 120px;
+        width: 60%;
+    }
+    .inputChatBox input{
+        bottom: 120px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
+    .inputChatBox button{
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        transition: all ;
+        transition: all 0,25 ease;
+    }
+    .inputChatBox button:active{
+        transform: scale(.95);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
 }
 @media screen and (min-width:701px) and (max-width: 850px){
     .button2{
@@ -480,6 +523,49 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
         cursor: pointer;
         margin-left: 94.5%;
         position: fixed;
+    }
+    .chatBox{
+        margin-left: 7px;
+        margin-top: 15px;
+        position: flex;
+        padding: 20px;
+        max-width: 330px;
+        max-height: 200px;
+        width: 330px;
+        height: 200px;
+        background-color: var(--quaternary-color);
+        overflow: auto;
+        border-radius: 8px;
+        color: var(--senary-color);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    }
+    .inputChatBox{
+        margin-left: 55px;
+        position: absolute;
+        bottom: 170px;
+        width: 60%;
+    }
+    .inputChatBox input{
+        bottom: 170px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
+    .inputChatBox button{
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        transition: all ;
+        transition: all 0,25 ease;
+    }
+    .inputChatBox button:active{
+        transform: scale(.95);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
     }
 }
 @media screen and (min-width:601px) and (max-width: 850px){
@@ -521,6 +607,49 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
         margin-left: 94.5%;
         position: fixed;
     }
+    .chatBox{
+        margin-left: 7px;
+        margin-top: 15px;
+        position: flex;
+        padding: 20px;
+        max-width: 330px;
+        max-height: 200px;
+        width: 330px;
+        height: 200px;
+        background-color: var(--quaternary-color);
+        overflow: auto;
+        border-radius: 8px;
+        color: var(--senary-color);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    }
+    .inputChatBox{
+        margin-left: 55px;
+        position: absolute;
+        bottom: 170px;
+        width: 60%;
+    }
+    .inputChatBox input{
+        bottom: 170px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
+    .inputChatBox button{
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        transition: all ;
+        transition: all 0,25 ease;
+    }
+    .inputChatBox button:active{
+        transform: scale(.95);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
 }
 @media screen and (min-width:550px) and (max-width: 600px){
     .button2{
@@ -560,6 +689,49 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
         cursor: pointer;
         margin-left: 93.5%;
         position: fixed;
+    }
+    .chatBox{
+        margin-left: 7px;
+        margin-top: 15px;
+        position: flex;
+        padding: 20px;
+        max-width: 317px;
+        max-height: 200px;
+        width: 317px;
+        height: 200px;
+        background-color: var(--quaternary-color);
+        overflow: auto;
+        border-radius: 8px;
+        color: var(--senary-color);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    }
+    .inputChatBox{
+        margin-left: 45px;
+        position: absolute;
+        bottom: 180px;
+        width: 60%;
+    }
+    .inputChatBox input{
+        bottom: 180px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
+    .inputChatBox button{
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        transition: all ;
+        transition: all 0,25 ease;
+    }
+    .inputChatBox button:active{
+        transform: scale(.95);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
     }
 }
 
@@ -601,5 +773,48 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
         cursor: pointer;
         margin-left: 90%;
         position: fixed;
+    }
+    .chatBox{
+        margin-left: 40px;
+        margin-top: 15px;
+        position: flex;
+        padding: 20px;
+        max-width: 317px;
+        max-height: 100px;
+        width: 317px;
+        height: 100px;
+        background-color: var(--quaternary-color);
+        overflow: auto;
+        border-radius: 8px;
+        color: var(--senary-color);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    }
+    .inputChatBox{
+        margin-left: 45px;
+        position: absolute;
+        bottom: 10px;
+        width: 60%;
+    }
+    .inputChatBox input{
+        bottom: 180px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+    }
+    .inputChatBox button{
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--quinary-color);
+        color: var(--senary-color);
+        transition: all ;
+        transition: all 0,25 ease;
+    }
+    .inputChatBox button:active{
+        transform: scale(.95);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
     }
 }
