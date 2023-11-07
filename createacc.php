@@ -14,6 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
     <title>Mountain Goats - Admin</title>
     <link rel="stylesheet" type="text/css" href="styleadmin.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="topbar">
@@ -58,8 +59,9 @@ if (!isset($_SESSION['loggedin'])) {
         echo '<script>window.location.href = "home.php";</script>';
     }
     ?>
-    <div class="user-form-container">
-        <h1 class="page-title">Maak account</h1>
+    <div class="nottopbar">
+    <div class="user-form-container" style="margin-bottom: 37.5%; justify-content: center; margin-left:42.5%;">
+        <h1 id="header123" class="page-title">Maak account</h1>
         <form class="user-form" method="post">
             <label for="username">Gebruikersnaam:</label>
             <input type="text" name="username" id="username" required><br>
@@ -76,5 +78,6 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="submit" class="submit-button" value="Maak account">
         </form>
     </div>
+</div>
 </body>
 </html>

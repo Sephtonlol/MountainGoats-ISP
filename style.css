@@ -298,6 +298,11 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     border-style: solid;
     border-color: var(--primary-color); 
     background-color: var(--secundary-color);
+    color: var(--senary-color)
+}
+.profileBox input{
+    background-color: var(--tertiary-color);
+    color: var(--senary-color)
 }
 .profilesubmit{
     position: absolute;
@@ -351,6 +356,51 @@ box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
     font-weight: bold;
     color: var(--senary-color);
   }
+#header123{
+    color: var(--senary-color);
+}
+.chatBox{
+    margin-left: 70px;
+    margin-top: 15px;
+    position: flex;
+    padding: 20px;
+    max-width: 499px;
+    max-height: 200px;
+    width: 499px;
+    height: 200px;
+    background-color: var(--quaternary-color);
+    overflow: auto;
+    border-radius: 8px;
+    color: var(--senary-color);
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+}
+.inputChatBox{
+    margin-left: 200px;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+}
+.inputChatBox input{
+    background-color: var(--quinary-color);
+    color: var(--senary-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+}
+.inputChatBox button{
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.01);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--quinary-color);
+    color: var(--senary-color);
+    transition: all ;
+    transition: all 0,25 ease;
+}
+.inputChatBox button:active{
+    transform: scale(.95);
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.03);
+}
   
 @media screen and (min-width:851px) and (max-width: 985px){
     .button2{
